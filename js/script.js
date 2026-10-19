@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupProjectFilter();
     setupReadMore();
       loadRepos();
+       setupScrollReveal(); 
 });
 
 // ---- Footer year -----------------------------------------
@@ -198,4 +199,23 @@ async function loadRepos() {
     retry.addEventListener('click', loadRepos);
     status.appendChild(retry);
   }
+}
+// ---- Fade-in on scroll ----
+function setupScrollReveal() {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.section-title, .project-card, .contact-form').forEach((el) => {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
 }
