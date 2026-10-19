@@ -88,19 +88,26 @@ function setupContactForm() {
     const email = form.email.value.trim();
     const message = form.message.value.trim();
 
-    if (!name || !email || !message) {
-      status.textContent = 'Please fill in every field before sending.';
+    const errors = {
+      nameError: name.length < 2 ? 'Please enter your name (at least 2 characters).' : '',
+      emailError: !isValidEmail(email) ? 'Enter a valid email like you@example.com.' : '',
+      messageError: message.length < 10 ? 'Please write at least 10 characters.' : '',
+    };
+
+    let hasError = false;
+    for (const [id, text] of Object.entries(errors)) {
+      document.getElementById(id).textContent = text;
+      if (text) hasError = true;
+    }
+
+    if (hasError) {
+      status.textContent = 'Please fix the errors above and send again.';
+      status.className = 'form-status is-error';
       return;
     }
 
-    if (!isValidEmail(email)) {
-      status.textContent = 'Please enter a valid email address.';
-      return;
-    }
-
-    // No backend is wired up for this assignment, so we just
-    // confirm the message locally and reset the form.
     status.textContent = `Thanks, ${name}! Your message has been noted (demo only — no server is connected).`;
+    status.className = 'form-status is-success';
     form.reset();
   });
 }

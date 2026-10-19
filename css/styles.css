@@ -14,6 +14,8 @@
   --max-width: 1100px;
   --font-body: 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
   --font-display: Georgia, 'Times New Roman', serif;
+  --error: #c62828;      /* NEW */
+  --success: #1b7f4b;    /* NEW */
 }
 
 [data-theme="dark"] {
@@ -24,6 +26,8 @@
   --accent: #4169E1;
   --border: #33353a;
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+   --error: #ff7a7a;      /* NEW */
+  --success: #4cd08b;    /* NEW */
 }
 
 /* =========================================================
@@ -399,3 +403,6 @@ input:focus, textarea:focus {
 #repoStatus button { margin-left: 0.5rem; font: inherit; padding: 0.4rem 0.9rem;
   border-radius: var(--radius); border: 1px solid var(--border);
   background: var(--bg-alt); color: var(--text); cursor: pointer; }
+  .field-error { color: var(--error); font-size: 0.85rem; }
+.form-status.is-success { color: var(--success); font-weight: 600; }
+.form-status.is-error { color: var(--error); font-weight: 600; }
