@@ -389,3 +389,13 @@ input:focus, textarea:focus {
   -webkit-box-orient: vertical; overflow: hidden; }
 .read-more { background: none; border: none; color: var(--accent); font: inherit;
   font-weight: 600; cursor: pointer; padding: 0; margin-bottom: 1rem; }
+
+  #repoList { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+#repoList li { background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1rem; }
+#repoList a { color: var(--accent); font-weight: 600; overflow-wrap: anywhere; }
+#repoList p { margin: 0.4rem 0 0; color: var(--text-muted); font-size: 0.9rem; }
+#repoStatus { color: var(--text-muted); }
+#repoStatus button { margin-left: 0.5rem; font: inherit; padding: 0.4rem 0.9rem;
+  border-radius: var(--radius); border: 1px solid var(--border);
+  background: var(--bg-alt); color: var(--text); cursor: pointer; }

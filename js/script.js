@@ -4,7 +4,7 @@
 // in localStorage), time-of-day greeting, and contact form
 // validation feedback (no backend — front-end only).
 // =========================================================
-
+const GITHUB_USERNAME = 'kfupmstudent';
 document.addEventListener('DOMContentLoaded', () => {
   setFooterYear();
   setupMobileNav();
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupContactForm();
   setupProjectFilter();
     setupReadMore();
+      loadRepos();
 });
 
 // ---- Footer year -----------------------------------------
@@ -154,4 +155,40 @@ function setupReadMore() {
     });
     desc.after(btn);
   });
+}
+// ---- GitHub repositories (public API) ----
+async function loadRepos() {
+  const status = document.getElementById('repoStatus');
+  const list = document.getElementById('repoList');
+  list.innerHTML = '';
+  status.textContent = 'Loading repositories…';
+  try {
+    const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`);
+    if (!res.ok) throw new Error('Status ' + res.status);
+    const repos = await res.json();
+    if (repos.length === 0) {
+      status.textContent = 'No public repositories yet. Check back soon!';
+      return;
+    }
+    status.textContent = '';
+    repos.forEach((repo) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = repo.html_url;
+      a.textContent = repo.name;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      const p = document.createElement('p');
+      p.textContent = repo.description || 'No description provided.';
+      li.append(a, p);
+      list.appendChild(li);
+    });
+  } catch (error) {
+    status.textContent = 'Could not load repositories. Check your internet connection and try again. ';
+    const retry = document.createElement('button');
+    retry.type = 'button';
+    retry.textContent = 'Try again';
+    retry.addEventListener('click', loadRepos);
+    status.appendChild(retry);
+  }
 }
