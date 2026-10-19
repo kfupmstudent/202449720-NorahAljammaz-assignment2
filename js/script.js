@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setGreetingByTime();
   setupContactForm();
   setupProjectFilter();
+    setupReadMore();
 });
 
 // ---- Footer year -----------------------------------------
@@ -138,4 +139,19 @@ function setupProjectFilter() {
   }));
   search.addEventListener('input', apply);
   apply();
+}
+// ---- Read more / Show less ----
+function setupReadMore() {
+  document.querySelectorAll('.project-desc').forEach((desc) => {
+    desc.classList.add('is-collapsed');
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'read-more';
+    btn.textContent = 'Read more';
+    btn.addEventListener('click', () => {
+      const collapsed = desc.classList.toggle('is-collapsed');
+      btn.textContent = collapsed ? 'Read more' : 'Show less';
+    });
+    desc.after(btn);
+  });
 }

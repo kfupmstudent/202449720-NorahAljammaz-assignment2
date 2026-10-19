@@ -385,3 +385,7 @@ input:focus, textarea:focus {
 #resultsCount { color: var(--text-muted); font-size: 0.9rem; }
 #emptyState { padding: 1.5rem; text-align: center; border: 1px dashed var(--border);
   border-radius: var(--radius); color: var(--text-muted); }
+.project-desc.is-collapsed { display: -webkit-box; -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical; overflow: hidden; }
+.read-more { background: none; border: none; color: var(--accent); font: inherit;
+  font-weight: 600; cursor: pointer; padding: 0; margin-bottom: 1rem; }
