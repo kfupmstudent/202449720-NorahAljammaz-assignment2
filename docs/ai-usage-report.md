@@ -14,7 +14,7 @@
     (see Challenges below)
   - drafting the technical documentation and this report
   - Claude also produced a complete reference version of the site and documentation files (listed
-    below as A01–A06). ✎ I did not copy it: I typed my own code from the smaller step-by-step snippets.
+    below as A01–A06). I did not copy it: I typed my own code from the smaller step-by-step snippets.
   
 - **ChatGPT (OpenAI)** — Used in a separate conversation to ask how to clone / copy my Assignment 1
   repository so that I could start Assignment 2.I also used it to review my finalized code 
@@ -28,9 +28,8 @@ requirements check) was declared in Assignment 1 and is not repeated here.
 
 | ID | Tool (model) | Date | Purpose | Files affected | What you changed and how you verified it |
 |----|--------------|------|---------|----------------|------------------------------------------|
-| C01 | Claude (Claude Sonnet 5.5) | 2026-10-19 | Planned the features from the assignment brief; gave step-by-step code snippets and file locations for the filter / search, Read more, GitHub API, form validation, and animations; helped with Git branches, commits, and repository problems; drafted the technical documentation and this report | `index.html`, `css/styles.css`, `js/script.js`, `README.md`, `docs/technical-documentation.md`, `docs/ai-usage-report.md` | ✎ I typed the code myself and adapted it (write what you changed, for example button labels, tags, error wording, colors, comments). I tested each feature in the browser after adding it: the filter buttons and search (including no results), Read more / Show less, the GitHub section (loaded, and offline to see the error and "Try again"), the form with empty / invalid / valid input, dark mode, and the scroll animations. I read the generated documentation and corrected it to match my code. |
-| C02 | ChatGPT (✎ model shown in the chat) | ✎ date of the chat | Asked how to clone / copy my Assignment 1 repository to start Assignment 2 (repository setup, no project code) | ✎ None (confirm) | ✎ Write which of its suggestions you used and how you checked the copy worked (for example that the new repository opened and the site ran). |
-
+| C01 | Claude (Claude Sonnet 5.5) | 2026-10-19 | Planned the features from the assignment brief; gave step-by-step code snippets and file locations for the filter / search, Read more, GitHub API, form validation, and animations; helped with Git branches, commits, and repository problems; drafted the technical documentation and this report | `index.html`, `css/styles.css`, `js/script.js`, `README.md`, `docs/technical-documentation.md`, `docs/ai-usage-report.md` | ✎I typed the code myself and adapted it. I reviewed the code myself and made sure I understood it also I gave the AI my original blue theme so minimal stylistic changes were made. I tested each feature in the browser after adding it: the filter buttons and search (including no results), Read more / Show less, the GitHub section (loaded, and offline to see the error and "Try again"), the form with empty / invalid / valid input, dark mode, and the scroll animations. I read the generated documentation and corrected it to match my code. |
+| C02 | ChatGPT (✎ model shown in the chat) | 19 Oct 2026 | Asked how to clone / copy my Assignment 1 repository to start Assignment 2 (repository setup, no project code) | ✎ None  |I wanted to copy assignment ! and use it as a baseline for assignment 2 without affecting each other so I used chat gpt to guide me 
 **AI-generated artifacts in the evidence ZIP** (what the AI produced before my edits):
 - A01 `index.html`, A02 `styles.css`, A03 `script.js` — Claude's complete reference version of the site
 - A04 `README.md`, A05 `technical-documentation.md`, A06 `ai-usage-report.md` — Claude's first drafts of the documentation
@@ -51,12 +50,13 @@ requirements check) was declared in Assignment 1 and is not repeated here.
   empty outer repository and no changes to commit. I fixed it by opening the inner `assignment2` folder
   and checking `git status`, `git branch`, and `git remote -v`.
 - **Missing changes in a commit:** my first commit for the filter did not include `css/styles.css`, because
-  I had not saved the CSS yet. ✎ I added the styles in a follow-up commit. (Edit if you handled it differently.)
+  I had not saved the CSS yet. ✎ I added the styles in a follow-up commit. 
 - **Placing code correctly:** I had to match each snippet to my own files, fix typos, and test after every
   step. I could not just trust that the code would work as given.
+- **Missing changing placeholders:** I used AI as a tempelate so forgot to change some of the placeholders in some minor places which is unproffessional looking.
 
 ## Learning Outcomes
-✎ Keep only the points you can explain in your own words, and add your own.
+
 - How the filter and search work together: a project is shown only if it matches the selected button **and**
   the search text, and cards are hidden with the `hidden` attribute.
 - How `fetch` with `async` / `await` loads data from a public API, why the call is wrapped in `try` / `catch`,
@@ -68,7 +68,7 @@ requirements check) was declared in Assignment 1 and is not repeated here.
 - How Git branches, commits, and remotes fit together, and how to check which repository I am working in.
 
 ## Responsible Use & Modifications
-- ✎ I read, typed, tested, and adjusted all of the code myself, and I can explain how each feature works.
+- I read, typed, tested, and adjusted all of the code myself, and I can explain how each feature works.
 - No AI output was submitted unreviewed. The documentation was checked against my code and corrected where it
   did not match.
 - Commits that include AI-assisted work credit the tool in the commit message, for example:
@@ -85,4 +85,4 @@ regulations.
 
 - **Name:** Norah Aljammaz
 - **ID:** 202449720
-- **Date:** ✎ write the date you submit
+- **Date:** 19 Oct 2026
