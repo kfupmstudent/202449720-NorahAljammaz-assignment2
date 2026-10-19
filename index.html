@@ -24,6 +24,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+           <li><a href="#github">GitHub</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -61,14 +62,21 @@
     <section id="projects" class="section">
       <h2 class="section-title">Projects</h2>
       <p class="section-subtitle">A couple of things I've built recently.</p>
-
+<div class="project-controls">
+  <button type="button" class="filter-btn active" data-filter="all">All</button>
+  <button type="button" class="filter-btn" data-filter="social">Social</button>
+  <button type="button" class="filter-btn" data-filter="education">Education</button>
+  <input type="search" id="projectSearch" placeholder="Search projects…" aria-label="Search projects" />
+</div>
+<p id="resultsCount" aria-live="polite"></p>
+<p id="emptyState" hidden>No projects match. Try a different keyword or clear the search.</p>
       <div class="project-grid">
 
- <article class="project-card">
+    <article class="project-card" data-tags="social mobile">
   <img src="assets/images/breaker-card.png" alt="Breaker app splash screen" />
   <div class="project-body">
     <h3>Breaker — Campus Social App</h3>
-    <p>A real-time campus social app concept for KFUPM students that turns free time between classes into spontaneous hangouts. Breaker automatically detects break times from a student's class schedule, shows friends' live availability and location on a campus map, and lets students create instant meetups or discover "Happening Now" campus events. Designed end-to-end from use case analysis and activity/sequence diagrams through to a medium-fidelity interactive Figma prototype, with a focus on usability (Nielsen's heuristics) and a clean, consistent visual language.</p>
+    <p class="project-desc">A real-time campus social app concept for KFUPM students that turns free time between classes into spontaneous hangouts. Breaker automatically detects break times from a student's class schedule, shows friends' live availability and location on a campus map, and lets students create instant meetups or discover "Happening Now" campus events. Designed end-to-end from use case analysis and activity/sequence diagrams through to a medium-fidelity interactive Figma prototype, with a focus on usability (Nielsen's heuristics) and a clean, consistent visual language.</p>
     <div class="project-links">
       <a href="https://www.figma.com/make/ttJM1GJlDU5ra656EkCOo0/Campus-Social-App?fullscreen=1&t=Mf4ZXcTnwiz9TjY0-1" class="link" target="_blank" rel="noopener">Live demo</a>
       <a href="https://www.figma.com/design/FFACZiLdAcuRzPtCkcXsN6/Untitled?node-id=0-1&t=USZqXFNj8AAWcRhF-1" class="link" target="_blank" rel="noopener">Design files</a>
@@ -76,11 +84,11 @@
   </div>
 </article>
 
-<article class="project-card">
+   <article class="project-card" data-tags="education business mobile">
   <img src="assets/images/darsi-card.png" alt="Darsi app splash screen" />
   <div class="project-body">
     <h3>Darsi — On-Demand Tutor Marketplace</h3>
-    <p>A mobile marketplace concept that makes finding and booking a vetted tutor as fast as ordering a ride — instead of relying on WhatsApp groups and word of mouth. Students filter tutors by subject, level, budget, and session type, compare verified profiles and reviews, then book and pay in-app with transparent, flat-fee pricing. Backed by real market research and a full business case — competitive analysis, value proposition canvas, business model canvas, 3-year financial projections, and a funding ask.</p>
+    <p class="project-desc">A mobile marketplace concept that makes finding and booking a vetted tutor as fast as ordering a ride — instead of relying on WhatsApp groups and word of mouth. Students filter tutors by subject, level, budget, and session type, compare verified profiles and reviews, then book and pay in-app with transparent, flat-fee pricing. Backed by real market research and a full business case — competitive analysis, value proposition canvas, business model canvas, 3-year financial projections, and a funding ask.</p>
     <div class="project-links">
       <a href="https://www.figma.com/make/r2auNbObSEFZ15hjWcyChn/Design-DARSI-Tutoring-App?t=jPGqk4Hth3c56hkQ-1" class="link" target="_blank" rel="noopener">Live demo</a>
     </div>

@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupThemeToggle();
   setGreetingByTime();
   setupContactForm();
+  setupProjectFilter();
 });
 
 // ---- Footer year -----------------------------------------
@@ -104,4 +105,37 @@ function setupContactForm() {
 
 function isValidEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+// ---- Project filter + live search ----
+function setupProjectFilter() {
+  const cards = document.querySelectorAll('.project-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+  const search = document.getElementById('projectSearch');
+  const count = document.getElementById('resultsCount');
+  const empty = document.getElementById('emptyState');
+  let activeFilter = 'all';
+
+  function apply() {
+    const query = search.value.trim().toLowerCase();
+    let visible = 0;
+    cards.forEach((card) => {
+      const text = (card.querySelector('h3').textContent + ' ' +
+        card.dataset.tags + ' ' +
+        card.querySelector('.project-desc').textContent).toLowerCase();
+      const matchesFilter = activeFilter === 'all' || card.dataset.tags.split(' ').includes(activeFilter);
+      const show = matchesFilter && text.includes(query);
+      card.hidden = !show;
+      if (show) visible++;
+    });
+    count.textContent = `Showing ${visible} of ${cards.length} projects`;
+    empty.hidden = visible !== 0;
+  }
+
+  buttons.forEach((btn) => btn.addEventListener('click', () => {
+    activeFilter = btn.dataset.filter;
+    buttons.forEach((b) => b.classList.toggle('active', b === btn));
+    apply();
+  }));
+  search.addEventListener('input', apply);
+  apply();
 }
