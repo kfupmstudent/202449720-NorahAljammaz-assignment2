@@ -30,8 +30,8 @@ requirements check) was declared in Assignment 1 and is not repeated here.
 | ID | Tool (model) | Date | Purpose | Files affected | What you changed and how you verified it |
 |----|--------------|------|---------|----------------|------------------------------------------|
 | C01 | Claude (Claude Sonnet 5.5) | 2026-10-19 | Planned the features from the assignment brief; gave step-by-step code snippets and file locations for the filter / search, Read more, GitHub API, form validation, and animations; helped with Git branches, commits, and repository problems; drafted the technical documentation and this report | `index.html`, `css/styles.css`, `js/script.js`, `README.md`, `docs/technical-documentation.md`, `docs/ai-usage-report.md` | I typed the code myself and adapted it. I reviewed the code myself and made sure I understood it also I gave the AI my original blue theme so minimal stylistic changes were made. I tested each feature in the browser after adding it: the filter buttons and search (including no results), Read more / Show less, the GitHub section (loaded, and offline to see the error and "Try again"), the form with empty / invalid / valid input, dark mode, and the scroll animations. I read the generated documentation and corrected it to match my code. |
-| C02 | ChatGPT  | 19 Oct 2026 | Asked how to clone / copy my Assignment 1 repository to start Assignment 2 (repository setup, no project code) |  None  |I wanted to copy assignment ! and use it as a baseline for assignment 2 without affecting each other so I used chat gpt to guide me 
-| C03 | ChatGPT | 2026-10-19  | Used as a checker: reviewed my finished work against the assignment requirements and rubric |  No file changed | Just mentioned a few placeholders that I forgot to change and confirmed my project's quality |
+| C02 | ChatGPT (GPT-5.6 Luna Light)  | 19 Oct 2026 | Asked how to clone / copy my Assignment 1 repository to start Assignment 2 (repository setup, no project code) |  None  |I wanted to copy assignment ! and use it as a baseline for assignment 2 without affecting each other so I used chat gpt to guide me 
+| C03 | ChatGPT (GPT-5.6 Luna Light) | 2026-10-19  | Used as a checker: reviewed my finished work against the assignment requirements and rubric |  No file changed | Just mentioned a few placeholders that I forgot to change and confirmed my project's quality |
 **AI-generated artifacts in the evidence ZIP** (what the AI produced before my edits):
 - A01 `index.html`, A02 `styles.css`, A03 `script.js` — Claude's complete reference version of the site
 - A04 `README.md`, A05 `technical-documentation.md`, A06 `ai-usage-report.md` — Claude's first drafts of the documentation
@@ -87,4 +87,4 @@ regulations.
 
 - **Name:** Norah Aljammaz
 - **ID:** 202449720
-- **Date:** 19 Oct 2026
+- **Date:** 25 Oct 2026
