@@ -1,7 +1,7 @@
-   # 202449720-NorahAljammaz-assignment2
+# 202449720-NorahAljammaz-assignment2
 # Personal Portfolio
 ## Project Description
-This is my personal portfolio website, built for Assignment 2 of SWE 206. This version adds interactive features: project filtering and search, live GitHub data, animations, and better form feedback.It introduces me, showcases two of my real projects — **Breaker** (a campus social app concept) and
+This is my personal portfolio website, built for Assignment 2 of SWE 206. This version adds interactive features: project filtering and search, live GitHub data, animations, and better form feedback. It introduces me, showcases two of my real projects — **Breaker** (a campus social app concept) and
 **Darsi** (an on-demand tutor marketplace) — and provides a way to get in touch. It's
 built with plain HTML, CSS, and JavaScript (no framework), and is responsive across
 desktop, tablet, and mobile.
@@ -59,8 +59,8 @@ I used a few AI tools throughout this project, each for a different part:
   point, and I later used it again for a final review pass that caught a few things I'd
   missed.
 - **Gemini** helped write my project descriptions and generated my logo image.
-- **ChatGPT** - Used to review work again to make sure all requirements were met. Used to help clone repositry.
-- **Claude** Used to generqte code for assignment 2 additional feautures they were reviewed by me 
+- **ChatGPT** - Used to review work again to make sure all requirements were met. Used to help clone repository.
+- **Claude** Used to generate code for assignment 2 additional features they were reviewed by me 
 
 I reviewed and edited everything the AI produced — fixing broken or mismatched code,
 rewriting content to reflect my actual work, and adjusting the styling myself. AI sped

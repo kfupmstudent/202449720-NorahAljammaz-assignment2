@@ -14,8 +14,8 @@
   --max-width: 1100px;
   --font-body: 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
   --font-display: Georgia, 'Times New Roman', serif;
-  --error: #c62828;      /* NEW */
-  --success: #1b7f4b;    /* NEW */
+  --error: #c62828;      
+  --success: #1b7f4b;   
 }
 
 [data-theme="dark"] {
@@ -26,8 +26,8 @@
   --accent: #4169E1;
   --border: #33353a;
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-   --error: #ff7a7a;      /* NEW */
-  --success: #4cd08b;    /* NEW */
+   --error: #ff7a7a;     
+  --success: #4cd08b;    
 }
 
 /* =========================================================

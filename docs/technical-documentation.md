@@ -182,5 +182,5 @@ If the script fails, visitors still see all text and content.
 The features use standard browser APIs that current versions of Chrome, Edge, Firefox, and Safari
 support: `fetch`, `async` / `await`, `IntersectionObserver`, CSS Grid / Flexbox, and CSS custom
 properties. If `IntersectionObserver` is not available, the scroll fade-in is skipped and the content is
-shown normally. ✎ Add the browsers you actually tested in (for example "Tested in Chrome and Safari"),
+shown normally. Tested on Safari 
 or delete this line.
