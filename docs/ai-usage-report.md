@@ -18,6 +18,7 @@
   
 - **ChatGPT (OpenAI)** — Used in a separate conversation to ask how to clone / copy my Assignment 1
   repository so that I could start Assignment 2.I also used it to review my finalized code 
+- **ChatGPT (OpenAI), second conversation** — Used as a checker: I asked it to review my finished work against the assignment requirements and rubric. It confirmed my project was good just a few minor details to change no files affected 
 
 ## Carried Over from Assignment 1
 The starting point for this assignment is my Assignment 1 portfolio. The AI use for that work (Claude for
@@ -34,6 +35,7 @@ requirements check) was declared in Assignment 1 and is not repeated here.
 - A01 `index.html`, A02 `styles.css`, A03 `script.js` — Claude's complete reference version of the site
 - A04 `README.md`, A05 `technical-documentation.md`, A06 `ai-usage-report.md` — Claude's first drafts of the documentation
 - A07 `technical-documentation.md`, A08 `ai-usage-report.md` — Claude's final drafts of these two documents, written to match the code I typed. I did not use the files directly but created my own and copied some features from there to my site.
+| C03 | ChatGPT | ✎ date of the chat | Used as a checker: reviewed my finished work against the assignment requirements and rubric |  No file changed | Just mentioned a few placeholders that I forgot to change and confirmed my project's quality |
 
 ## Benefits & Challenges
 **Benefits:**
@@ -73,7 +75,7 @@ requirements check) was declared in Assignment 1 and is not repeated here.
   did not match.
 - Commits that include AI-assisted work credit the tool in the commit message, for example:
   `Assisted-by: Claude (Claude Sonnet 5.5)`.
-- The full conversations (C01 with Claude, C02 with ChatGPT) and the AI's original files (before my edits) are in
+- The full conversations (C01 with Claude, C02 and C03 with ChatGPT) and the AI's original files (before my edits) are in
   the AI Evidence ZIP submitted on Blackboard (`202449720-NorahAljammaz-assignment2-ai-evidence.zip`). They are
   not committed to this repository.
 
